@@ -1,15 +1,17 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AppRoutes } from "components/AppRoutes";
+import { Layout } from "components/Layout";
+import { BrowserRouter } from "react-router-dom";
+import GlobalStyles from "./styles/GlobalStyles";
 
-import GlobalStyles from './styles/GlobalStyles'
-
-
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      Weather app
+      <Layout>
+        <AppRoutes />
+      </Layout>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
