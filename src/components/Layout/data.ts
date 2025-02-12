@@ -1,9 +1,11 @@
 export const headerLinks = [
   {
+    icon: "home",
     text: "Home",
     path: "/",
   },
   {
+    icon: "history",
     text: "History",
     path: "/history",
   },

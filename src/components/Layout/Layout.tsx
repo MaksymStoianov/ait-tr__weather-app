@@ -1,3 +1,4 @@
+import { ButtonIcon } from "components/ButtonIcon";
 import { useNavigate } from "react-router-dom";
 import { footerLinks, headerLinks } from "./data";
 import {
@@ -12,19 +13,23 @@ import type { LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
-  const goToHomePage = () => navigate("/");
+  const goToPrevPage = () => navigate(-1);
 
-  const elHeaderLinks = headerLinks.map(({ text, path }) => (
-    <StyledNavLink
-      key={path}
-      to={path}
-      style={({ isActive }) => ({
-        textDecoration: isActive ? "underline" : "none",
-      })}
-    >
-      {text}
-    </StyledNavLink>
-  ));
+  const elHeaderLinks = headerLinks.map(({ icon, text, path }) =>
+    icon ? (
+      <ButtonIcon key={path} icon={icon} onClick={() => navigate(path)} />
+    ) : (
+      <StyledNavLink
+        key={path}
+        to={path}
+        style={({ isActive }) => ({
+          textDecoration: isActive ? "underline" : "none",
+        })}
+      >
+        {text}
+      </StyledNavLink>
+    ),
+  );
 
   const elFooterLinks = footerLinks.map(({ text, path }) => (
     <StyledNavLink
@@ -41,6 +46,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <LayoutWrapper>
       <Header>
+        <ButtonIcon onClick={goToPrevPage} icon="arrow_back_ios" />
         <NavContainer>{elHeaderLinks}</NavContainer>
       </Header>
       <Main>{children}</Main>
