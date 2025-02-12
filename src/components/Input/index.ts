@@ -1,3 +1,4 @@
 import Input from "./Input";
+import type { InputDatalist } from "./types";
 
-export { Input };
+export { Input, InputDatalist };
