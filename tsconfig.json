@@ -23,11 +23,6 @@
 			"vitest/globals"
 		]
 	},
-	"references": [
-		{
-			"path": "./tsconfig.node.json"
-		}
-	],
 	"exclude": [
 		"node_modules",
 		"**/*.html"
