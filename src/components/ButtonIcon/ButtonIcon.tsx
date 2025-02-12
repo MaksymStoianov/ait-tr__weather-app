@@ -1,30 +1,28 @@
-import { MainButtonIcon, SpanIcon } from "./styles";
+import { SpanIcon, StyledButtonIcon } from "./styles";
 import type { ButtonProps } from "./types";
 
 function ButtonIcon(props: ButtonProps) {
   const {
-    size = "24",
     icon,
     title,
     type = "button",
-    onClick,
     disabled = false,
-    ...rest
+    onClick,
+    style,
   } = props;
 
   return (
-    <MainButtonIcon
-      size={size}
+    <StyledButtonIcon
       type={type}
       onClick={onClick}
       disabled={disabled}
       title={title}
-      {...rest}
+      style={style}
     >
       <SpanIcon translate="no" className="material-symbols-outlined">
         {icon}
       </SpanIcon>
-    </MainButtonIcon>
+    </StyledButtonIcon>
   );
 }
 export default ButtonIcon;

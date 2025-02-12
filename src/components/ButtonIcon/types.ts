@@ -1,11 +1,13 @@
 import type { CSSProperties } from "react";
 
-export interface ButtonProps {
-  size?: string;
+export interface StyledButtonIconProps {
+  disabled: boolean;
+}
+
+export interface ButtonProps extends StyledButtonIconProps {
   icon?: string;
   title?: string;
-  type?: "submit" | "button" | "reset";
-  onClick?: () => void;
-  disabled?: boolean;
+  type: "submit" | "button" | "reset";
   style?: CSSProperties;
+  onClick?: () => void;
 }
