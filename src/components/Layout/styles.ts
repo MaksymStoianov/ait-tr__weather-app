@@ -18,17 +18,6 @@ export const Header = styled.header`
   color: white;
 `;
 
-export const HeaderLogoContainer = styled.div`
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-`;
-
-export const HeaderLogo = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
 export const NavContainer = styled.nav`
   display: flex;
   gap: 10px;

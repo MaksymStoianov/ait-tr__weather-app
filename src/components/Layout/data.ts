@@ -11,15 +11,7 @@ export const headerLinks = [
 
 export const footerLinks = [
   {
-    text: "Home",
-    path: "/",
-  },
-  {
-    text: "History",
-    path: "/history",
-  },
-  {
-    text: "About",
+    text: "Created in 2025 as a learning project by Maksim Stonov",
     path: "/about",
   },
 ];

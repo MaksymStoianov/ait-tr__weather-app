@@ -3,8 +3,6 @@ import { footerLinks, headerLinks } from "./data";
 import {
   Footer,
   Header,
-  HeaderLogo,
-  HeaderLogoContainer,
   LayoutWrapper,
   Main,
   NavContainer,
@@ -40,14 +38,9 @@ function Layout({ children }: LayoutProps) {
     </StyledNavLink>
   ));
 
-  // TODO: Add HeaderLogo src
-
   return (
     <LayoutWrapper>
       <Header>
-        <HeaderLogoContainer onClick={goToHomePage}>
-          <HeaderLogo src="" />
-        </HeaderLogoContainer>
         <NavContainer>{elHeaderLinks}</NavContainer>
       </Header>
       <Main>{children}</Main>
