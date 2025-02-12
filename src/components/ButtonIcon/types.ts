@@ -1,13 +1,13 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, MouseEvent } from "react";
 
 export interface StyledButtonIconProps {
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 export interface ButtonProps extends StyledButtonIconProps {
   icon?: string;
   title?: string;
-  type: "submit" | "button" | "reset";
+  type?: "submit" | "button" | "reset";
   style?: CSSProperties;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
