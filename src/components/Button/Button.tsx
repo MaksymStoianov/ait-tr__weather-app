@@ -1,19 +1,25 @@
-import { MainButton } from "./styles";
+import { StyledButton } from "./styles";
 import type { ButtonProps } from "./types";
 
 function Button(props: ButtonProps) {
   const {
-    name = "SEND",
     type = "button",
-    onClick,
+    style,
     disabled = false,
-    ...rest
+    onClick,
+    name = "OK",
   } = props;
 
   return (
-    <MainButton type={type} onClick={onClick} disabled={disabled} {...rest}>
+    <StyledButton
+      type={type}
+      style={style}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {name}
-    </MainButton>
+    </StyledButton>
   );
 }
+
 export default Button;
