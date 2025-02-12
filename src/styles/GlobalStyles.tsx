@@ -28,7 +28,7 @@ const globalStyles = css`
   }
 
   :root {
-    --primary-color: rgb(36, 94, 227);
+    --primary-color: #007bff;
     --secondary-color: #222;
   }
 
