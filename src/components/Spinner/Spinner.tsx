@@ -1,7 +1,10 @@
-import { SpinnerComponent } from "./styles";
+import { StyledSpinner } from "./styles";
+import type { SpinnerProps } from "./types";
 
-function Spinner() {
-  return <SpinnerComponent></SpinnerComponent>;
+function Spinner(props: SpinnerProps) {
+  const { style } = props;
+
+  return <StyledSpinner style={style}></StyledSpinner>;
 }
 
 export default Spinner;
