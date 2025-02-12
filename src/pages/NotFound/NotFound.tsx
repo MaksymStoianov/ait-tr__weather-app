@@ -1,7 +1,7 @@
-import { PageWrapper } from "./styles";
+import { StyledPageWrapper } from "./styles";
 
 function NotFound() {
-  return <PageWrapper></PageWrapper>;
+  return <StyledPageWrapper></StyledPageWrapper>;
 }
 
 export default NotFound;
