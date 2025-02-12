@@ -1,7 +1,7 @@
-import { PageWrapper } from "./styles";
+import { StyledPageWrapper } from "./styles";
 
 function About() {
-  return <PageWrapper></PageWrapper>;
+  return <StyledPageWrapper></StyledPageWrapper>;
 }
 
 export default About;
